@@ -11,6 +11,10 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 - Press F11 or double-click the fullscreen view to make the window fill the whole screen. Turn on
   Use OS fullscreen in settings to have the fullscreen button do the same.
+- On Linux, Sonora tells you when it cannot be heard because pipewire-alsa or pulseaudio-alsa
+  is missing, or when browser sign-in needs webkit2gtk-4.1, and names what to install.
+- Every notice in the corner, the update one included, has a Don't show again button. On the
+  update notice it turns off Check for updates.
 
 ### Fixed
 

@@ -11,7 +11,7 @@ use ui::{
 };
 
 use crate::chrome::{
-    Chrome, PlayerBar, SidebarLeft, SidebarRight, TitleBarOptions, ToastStack, UpdateNotice,
+    AppNotice, Chrome, PlayerBar, SidebarLeft, SidebarRight, TitleBarOptions, ToastStack,
 };
 use crate::shared::confirm::Confirm;
 use crate::shared::menus::CardMenu;
@@ -30,7 +30,7 @@ pub(crate) struct Workspace {
     card_menu: Entity<CardMenu>,
     widevine: Entity<WidevinePrompt>,
     toasts: Entity<ToastStack>,
-    notice: Entity<UpdateNotice>,
+    notice: Entity<AppNotice>,
     content: AnyView,
     /// A screen's own header, floated over the top of the page and outside its transition.
     /// The page pads itself to start beneath it.
@@ -60,7 +60,7 @@ impl Workspace {
             card_menu: CardMenu::entity(cx),
             widevine: cx.new(WidevinePrompt::new),
             toasts: cx.new(ToastStack::new),
-            notice: cx.new(UpdateNotice::new),
+            notice: cx.new(AppNotice::new),
             content,
             header: None,
             transition: None,
